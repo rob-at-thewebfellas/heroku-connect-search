@@ -46,6 +46,9 @@ group :development, :test do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+
+  # Use latest version of Foreman for better Ruby 2.0+ compatibility
+  gem 'foreman'
 end
 
 group :production do
@@ -54,3 +57,7 @@ end
 
 # Use high_voltage for static pages
 gem 'high_voltage', '~> 2.2.1'
+
+# Use puma as server with rack-timeout to handle slow stuff
+gem 'puma'
+gem 'rack-timeout'
