@@ -5,7 +5,8 @@
 /config/secrets.yml
 /config/settings.local.yml
 /config/settings/*.local.yml
-/log
+/log/*
+!/log/.keep
 /public/system
 /routes.txt
 /tmp
