@@ -51,3 +51,6 @@ end
 group :production do
   gem 'rails_12factor'
 end
+
+# Use high_voltage for static pages
+gem 'high_voltage', '~> 2.2.1'
