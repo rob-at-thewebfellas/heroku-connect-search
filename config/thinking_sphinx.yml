@@ -2,7 +2,7 @@ common: &common
   html_strip: 1
   min_infix_len: 3
   morphology:
-  version: 2.2.6
+  version: 2.1.8
 
 development:
   bin_path: /usr/local/bin
