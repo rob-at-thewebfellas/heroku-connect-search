@@ -1,4 +1,5 @@
 /.bundle
+/.env
 /config/database.yml
 /config/environments/*.local.yml
 /config/initializers/secret_token.rb
