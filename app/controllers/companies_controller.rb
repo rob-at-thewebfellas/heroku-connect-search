@@ -7,7 +7,7 @@ class CompaniesController < ApplicationController
       Company.search(Riddle::Query.escape(search_query), order: :name, star: true)
     else
       Company.order(:name)
-    end
+    end.page(params[:page])
   end
 
   protected

@@ -66,3 +66,6 @@ gem 'rack-timeout', '0.2.0'
 gem 'mysql2', '0.3.18'
 gem 'thinking-sphinx', '3.1.3'
 gem 'flying-sphinx', '1.2.0'
+
+# Use kaminari for pagination
+gem 'kaminari', '0.16.3'

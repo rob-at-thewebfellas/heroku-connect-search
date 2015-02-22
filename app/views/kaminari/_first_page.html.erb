@@ -1,0 +1,5 @@
+<%= content_tag(
+      :span,
+      link_to_unless(current_page.first?, "« First", url),
+      class: [ current_page.first? ? "disabled" : nil, "first" ].compact.join(" ")
+    ) %>

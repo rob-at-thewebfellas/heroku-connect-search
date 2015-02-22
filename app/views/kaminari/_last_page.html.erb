@@ -1,0 +1,5 @@
+<%= content_tag(
+      :span,
+      link_to_unless(current_page.last?, "Last »", url),
+      class: [ current_page.last? ? "disabled" : nil, "last" ].compact.join(" ")
+    ) %>

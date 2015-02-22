@@ -8,10 +8,11 @@
       <%= text_field_tag(:query, search_query) %>
     </div>
   </div>
-  <%= submit_tag("Search") %>
+  <%= submit_tag("Search", name: nil) %>
 <% end %>
-<ol>
+<ul>
   <% @companies.each do |company| %>
     <li><%= company.name %></li>
   <% end %>
-</ol>
+</ul>
+<%= paginate(@companies) %>
