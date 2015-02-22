@@ -1,0 +1,16 @@
+common: &common
+  html_strip: 1
+  min_infix_len: 3
+  morphology:
+  version: 2.2.6
+
+development:
+  bin_path: /usr/local/bin
+  mem_limit: 1024M
+  <<: *common
+
+test:
+  <<: *common
+
+production:
+  <<: *common

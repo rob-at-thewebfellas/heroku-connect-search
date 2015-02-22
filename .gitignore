@@ -4,6 +4,8 @@
 /config/initializers/secret_token.rb
 /config/settings.local.yml
 /config/settings/*.local.yml
+/config/*.sphinx.conf
+/db/sphinx
 /log/*
 !/log/.keep
 /public/system

@@ -59,5 +59,10 @@ end
 gem 'high_voltage', '~> 2.2.1'
 
 # Use puma as server with rack-timeout to handle slow stuff
-gem 'puma'
-gem 'rack-timeout'
+gem 'puma', '2.11.1'
+gem 'rack-timeout', '0.2.0'
+
+# Sphinx support
+gem 'mysql2', '0.3.18'
+gem 'thinking-sphinx', '3.1.3'
+gem 'flying-sphinx', '1.2.0'
