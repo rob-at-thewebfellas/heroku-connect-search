@@ -1,0 +1,82 @@
+/* Reset stylesheet based on http://meyerweb.com/eric/thoughts/2007/05/01/reset-reloaded/
+   and http://developer.yahoo.com/yui/reset/
+*/
+
+html, body, div, header, section, nav, span, object, h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  border: 0;
+  font-family: inherit;
+  font-size: 100%;
+  font-style: inherit;
+  font-weight: inherit;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+:focus {
+  outline: 0;
+}
+
+body {
+  line-height: 1;
+  color: black;
+  background: white;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+caption, legend, th {
+  font-weight: bold;
+  text-align: left;
+}
+
+td {
+  font-weight: normal;
+  text-align: left;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+}
+
+blockquote, q {
+  quotes: "" "";
+}
+
+blockquote, cite, q, var {
+  font-style: normal;
+}
+
+code, pre {
+  font-family: monospace;
+}
+
+del, ins {
+  text-decoration: none;
+}
+
+hr {
+  background: black;
+  border: 0;
+  color: black;
+  height: 1px;
+}
+
+strong {
+  font-weight: bold;
+}
+
+:invalid, :-moz-submit-invalid, :-moz-ui-invalid {
+  box-shadow: none;
+}

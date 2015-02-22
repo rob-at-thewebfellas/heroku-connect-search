@@ -1,0 +1,33 @@
+table {
+  margin: 1.6em 0;
+  width: 100%;
+}
+
+tr {
+  border-bottom: 1px solid #ccc;
+}
+
+td, th {
+  padding: 0.6em;
+}
+
+th {
+  color: #333;
+  font-weight: bold;
+}
+
+td {
+  color: #555;
+}
+
+th.centred, td.centred {
+  text-align: center;
+}
+
+td.number, th.number {
+  text-align: right;
+}
+
+td.warning {
+  color: #c00;
+}

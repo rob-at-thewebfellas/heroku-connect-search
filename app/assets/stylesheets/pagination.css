@@ -1,0 +1,22 @@
+.pagination {
+  background: #f1f1f1;
+  border-style: none;
+  box-shadow: 0 0 3px #ccc;
+  margin: 1em 0;
+  padding: 1em;
+  text-align: center;
+  -moz-box-shadow: 0 0 3px #ccc;
+  -webkit-box-shadow: 0 0 3px #ccc;
+}
+
+.pagination span {
+  padding: 0.25em;
+}
+
+.pagination span.disabled {
+  color: #aaa;
+}
+
+.pagination span.current {
+  font-weight: bold;
+}

@@ -1,6 +1,13 @@
+<h2>Companies</h2>
 <%= form_tag(companies_path, method: :get) do %>
-  <%= label_tag(:query, "Search for") %>
-  <%= text_field_tag(:query, search_query) %>
+  <div class="field_wrapper">
+    <div class="field_label">
+      <%= label_tag(:query, "Search keywords") %>
+    </div>
+    <div class="field_input">
+      <%= text_field_tag(:query, search_query) %>
+    </div>
+  </div>
   <%= submit_tag("Search") %>
 <% end %>
 <ol>

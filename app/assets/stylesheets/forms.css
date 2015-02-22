@@ -1,0 +1,183 @@
+abbr.required {
+  color: #c00;
+  font-weight: bold;
+}
+
+fieldset {
+  border-style: none;
+  box-shadow: 0 0 3px #c1c1c1 !important;
+  padding: 1em 2em;
+  margin: 1em 0;
+  -moz-box-shadow: 0 0 3px #c1c1c1;
+  -webkit-box-shadow: 0 0 3px #c1c1c1;
+}
+
+legend {
+  background-color: #fff;
+  font-family: arial, helvetica, sans-serif;
+  font-size: 1.3em;
+  font-weight: bold;
+  margin-left: -1em;
+  padding: 0 0.5em;
+}
+
+label {
+  font-weight: bold;
+}
+
+form div.field_wrapper {
+  margin-bottom: 0.5em;
+}
+
+form div.inline_field_wrapper label {
+  font-weight: bold;
+  margin: 0 0.5em;
+}
+
+form ul.collection_wrapper {
+  list-style-type: none;
+  margin: 0;
+}
+
+form ul.collection_wrapper li label {
+  font-weight: normal;
+  margin: 0 0.5em;
+}
+
+input, select, textarea {
+  border: 1px solid #888;
+  box-shadow: 0 0 3px #222;
+  font-family: inherit;
+  font-size: inherit;
+  margin: 0.25em 0;
+  padding: 0.4em;
+  -moz-box-shadow: 0 0 5px #222;
+  -webkit-box-shadow: 0 0 3px #222;
+}
+
+input:focus, select:focus, textarea:focus {
+  box-shadow: 0 0 3px #39c !important;
+  -moz-box-shadow: 0 0 3px #39c !important;
+  -webkit-box-shadow: 0 0 3px #39c !important;
+}
+
+div.field_error input, input:invalid, div.field_error select, select:invalid, div.field_error textarea, textarea:invalid {
+  box-shadow: 0 0 3px #c00;
+  -moz-box-shadow: 0 0 3px #c00;
+  -webkit-box-shadow: 0 0 3px #c00;
+}
+
+input[type=file], div.field_error input[type=file], input[type=file]:invalid {
+  border-style: none;
+  box-shadow: none;
+  padding: 0;
+}
+
+input[type=submit], a.button {
+  border-radius: 5px;
+  border-style: none;
+  box-shadow: 0 0 3px #222;
+  color: #fff;
+  font-weight: bold;
+  padding: 5px 10px 7px 10px;
+  -moz-border-radius: 5px;
+  -moz-box-shadow: 0 0 3px #222;
+  -webkit-border-radius: 5px;
+  -webkit-box-shadow: 0 0 3px #222;
+}
+
+input[type=submit]:focus, a.button:focus {
+  box-shadow: 0 0 3px #39c !important;
+  -moz-box-shadow: 0 0 3px #39c !important;
+  -webkit-box-shadow: 0 0 3px #39c !important;
+}
+
+input[type=submit] {
+  background-color: #89cc4e;
+  margin: 1em 1em 1em 0;
+}
+
+input[type=submit]:hover {
+  background-color: #89a54e;
+}
+
+a.button {
+  background-color: #8ac3d4;
+}
+
+a.button:hover {
+  background-color: #66abbf;
+}
+
+input[type=submit]:disabled, a.button.disabled {
+  background-color: #c1c1c1;
+}
+
+a.button.disabled:focus {
+  box-shadow: 0 0 3px #222 !important;
+  -moz-box-shadow: 0 0 3px #222 !important;
+  -webkit-box-shadow: 0 0 3px #222 !important;
+}
+
+input[type=submit].destroy {
+  background-color: #dc6a6a;
+}
+
+input[type=submit].destroy:hover {
+  background: #c64747;
+}
+
+form p.hint {
+  margin: 0 0 0.25em 0;
+}
+
+form div.image_file div.preview img {
+  border-style: none;
+  box-shadow: 0 0 5px #222;
+  color: #fff;
+  margin: 10px 0;
+  -moz-box-shadow: 0 0 5px #222;
+  -webkit-box-shadow: 0 0 5px #222;
+}
+
+div.errors_on_base {
+  background-color: #ffedef;
+  box-shadow: 0 0 3px #c99;
+  color: #666;
+  margin: 0 0 2em 0;
+  padding: 0.9em;
+}
+
+div.errors_on_base h3 {
+  color: #c00;
+  margin: 0;
+}
+
+div.errors_on_base p {
+  margin: 0;
+}
+
+div.errors_on_base ul {
+  list-style-type: square;
+  margin-left: 2em;
+}
+
+div.field_error label, form div.hidden_field_wrapper p.error_message {
+  color: #c00;
+}
+
+form span.error_message {
+  color: #c00;
+  font-size: 0.9em;
+  font-weight: normal;
+  padding-left: 0.5em;
+}
+
+form p.full_error_message_wrapper {
+  margin-top: 0;
+}
+
+form p.full_error_message_wrapper span.error_message {
+  font-size: 1em;
+  padding-left: 0;
+}
