@@ -6,7 +6,7 @@ class ContactsController < ApplicationController
     @contacts = if search_query.present?
       Salesforce::TheWebFellas::Contact.search(Riddle::Query.escape(search_query), order: :lastname, star: true)
     else
-      Salesforce::TheWebFellas::Contact.order(:lastname)
+      Salesforce::TheWebFellas::Contact.where(isdeleted: false).order(:lastname)
     end.page(params[:page])
   end
 
