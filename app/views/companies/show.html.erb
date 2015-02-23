@@ -2,6 +2,8 @@
 <dl>
   <dt class="label">Name</dt>
   <dd class="content"><%= @company.name %></dd>
+  <dt class="label">Last updated</dt>
+  <dd class="content"><%= l(@company.updated_at, format: :long) %></dd>
 </dl>
 <ul>
   <li><%= link_to('Edit', edit_company_path(@company)) %></li>
