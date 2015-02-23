@@ -26,7 +26,7 @@
     <% else %>
       <% @contacts.each do |contact| %>
         <tr>
-          <td><%= link_to(contact_full_name(contact), contact) %></td>
+          <td><%= link_to(contact_name(contact), contact) %></td>
           <td><%= contact.title %></td>
           <td>
             <%= link_to('Edit', edit_contact_path(contact)) %>

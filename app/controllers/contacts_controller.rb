@@ -41,13 +41,12 @@ class ContactsController < ApplicationController
 
     def collection_scope
       if search_params_present?
-        apply_scopes(Salesforce::TheWebFellas::Contact.search, search_params).search(
-          order: :lastname,
+        apply_scopes(Salesforce::TheWebFellas::Contact.search_order_by_name, search_params).search(
           per_page: Salesforce::TheWebFellas::Contact.default_per_page,
           star: true
         )
       else
-        Salesforce::TheWebFellas::Contact.where(isdeleted: false).order_by_last_name.page(search_params[:page])
+        Salesforce::TheWebFellas::Contact.not_deleted.order_by_name.page(search_params[:page])
       end
     end
 

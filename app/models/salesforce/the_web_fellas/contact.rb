@@ -11,8 +11,10 @@ module Salesforce
       SALUTATIONS = [ 'Mr.', 'Ms.', 'Mrs.', 'Dr.', 'Prof.' ].freeze
 
       include Searchable
+      sphinx_scope(:search_order_by_name) { { order: 'last_name ASC, first_name ASC' } }
 
-      scope :order_by_last_name, -> { order('LOWER(lastname) ASC') }
+      scope :not_deleted, -> { where(isdeleted: false) }
+      scope :order_by_name, -> { order('LOWER(lastname) ASC, LOWER(firstname) ASC') }
 
       # Make connect field names feel more 'Railsy'
       alias_attribute :first_name, :firstname
