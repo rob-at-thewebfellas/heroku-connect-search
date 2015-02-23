@@ -1,0 +1,9 @@
+<% unless (flashes = flash.to_hash.slice('alert', 'notice', 'warning')).empty? %>
+  <ul id="flashes">
+    <% flashes.each do |key, messages| %>
+      <% Array.wrap(messages).reject(&:blank?).each do |message| %>
+        <%= content_tag(:li, message, class: "flash_#{key.to_s.underscore}") %>
+      <% end %>
+    <% end %>
+  </ul>
+<% end %>

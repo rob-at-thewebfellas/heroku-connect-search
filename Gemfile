@@ -69,3 +69,7 @@ gem 'flying-sphinx', '1.2.0'
 
 # Use kaminari for pagination
 gem 'kaminari', '0.16.3'
+
+# Use has_scope and responders for cleaner controllers
+gem 'has_scope', '0.6.0'
+gem 'responders', '2.1.0'
