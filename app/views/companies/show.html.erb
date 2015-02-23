@@ -1,0 +1,9 @@
+<h2>Company details</h2>
+<dl>
+  <dt class="label">Name</dt>
+  <dd class="content"><%= @company.name %></dd>
+</dl>
+<ul>
+  <li><%= link_to('Edit', edit_company_path(@company)) %></li>
+  <li><%= link_to('Back', companies_path) %></li>
+</ul>
