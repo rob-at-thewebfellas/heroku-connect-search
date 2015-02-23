@@ -140,3 +140,11 @@ span.currency_symbol {
  font-weight: bold;
  padding: 0 0.25em;
 }
+
+p.help {
+  background-color: #ffffde;
+  box-shadow: 0 0 3px #ffcf0f;
+  color: #666;
+  margin: -0.4em 0 1.2em 0;
+  padding: 0.6em;
+}

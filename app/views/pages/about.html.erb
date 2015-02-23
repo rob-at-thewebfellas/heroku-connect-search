@@ -1,6 +1,33 @@
-<h2 class="page_heading">About the project</h2>
-<p>Welcome to my starter project!</p>
+<h2 class="page_heading">Searching with Sphinx &amp; Heroku Connect</h2>
+<h3>About the project</h3>
+<p>This starter project demonstrates the following technologies:</p>
 <ul>
-  <li><%= link_to('Search companies', companies_path) %></li>
-  <li><%= link_to('Search contacts', contacts_path) %></li>
+  <li>
+    <h4>Sphinx search</h4>
+    <p><%= link_to('Sphinx', 'http://sphinxsearch.com/', title: 'Find out more') %>
+       offers powerful search engine that, thanks to the
+       <%= link_to('ThinkingSphinx gem', 'http://pat.github.io/thinking-sphinx/', title: 'Find out more') %>,
+       provides excellent Rails integration. This project makes use of the
+       <%= link_to('FlyingSphinx add-on', 'http://info.flying-sphinx.com/', title: 'Find out more') %>
+      to provide ThinkingSphinx functionality on Heroku.</p>
+  </li>
+  <li>
+    <h4>Heroku Connect</h4>
+    <p>The <%= link_to('Heroku Connect add-on', 'https://devcenter.heroku.com/articles/herokuconnect', title: 'Find out more') %>
+       allows data from a Salesforce organisation to be shared with an app. In addition to providing
+       basic CRUD operations on data provided via Connect, this project also demonstrates how the data can be made searchable
+       using Sphinx.</p>
+  </li>
+</ul>
+<h3>Data types</h3>
+<p>The following data types are available:</p>
+<ul>
+  <li>
+    <h4><%= link_to('Companies', companies_path) %></h4>
+    <p>Companies demonstrate how Sphinx works with standard database records.</p>
+  </li>
+  <li>
+    <h4><%= link_to('Contacts', contacts_path) %></h4>
+    <p>Contacts are provided via Heroku Connect and demonstrate how Sphinx can be used to search the data sync'd with Salesforce.</p>
+  </li>
 </ul>

@@ -1,4 +1,8 @@
 <h2 class="page_heading">Contacts</h2>
+<p class="help">
+  Contacts are Heroku Connect models that are kept in sync with Salesforce. There will be a delay
+  before updates made in Salesforce are shown here (the data will re-sync every 10 minutes).
+</p>
 <%= form_tag(contacts_path, method: :get) do %>
   <div class="field_wrapper">
     <div class="field_label">
