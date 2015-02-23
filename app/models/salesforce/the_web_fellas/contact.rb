@@ -11,7 +11,7 @@ module Salesforce
       SALUTATIONS = [ 'Mr.', 'Ms.', 'Mrs.', 'Dr.', 'Prof.' ].freeze
 
       include Searchable
-      sphinx_scope(:search_order_by_name) { { order: 'last_name ASC, first_name ASC' } }
+      sphinx_scope(:search_order_by_name) { { order: :name } }
 
       scope :not_deleted, -> { where(isdeleted: false) }
       scope :order_by_name, -> { order('LOWER(lastname) ASC, LOWER(firstname) ASC') }
