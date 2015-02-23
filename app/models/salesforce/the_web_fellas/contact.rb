@@ -25,6 +25,9 @@ module Salesforce
 
       validates :first_name, :last_name, presence: true
 
+      def to_partial_path
+        'contacts/contact'
+      end
     end
   end
 end

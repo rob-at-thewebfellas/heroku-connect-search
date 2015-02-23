@@ -3,6 +3,8 @@ module SearchableController
   extend ActiveSupport::Concern
 
   included do
+    helper_method :search_params
+
     with_options only: :index do |o|
       o.has_scope :search_keywords, as: :keywords
       o.has_scope :page, default: 1

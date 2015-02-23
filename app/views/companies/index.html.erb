@@ -24,16 +24,7 @@
         <td class="warning" colspan="2">No companies available</td>
       </tr>
     <% else %>
-      <% @companies.each do |company| %>
-        <tr>
-          <td><%= link_to(company.name, company) %></td>
-          <td>
-            <%= link_to('Edit', edit_company_path(company)) %>
-            &nbsp;
-            <%= link_to('Destroy', company, method: :delete, data: { confirm: 'Are you sure?' }) %>
-          </td>
-        </tr>
-      <% end %>
+      <%= render(@companies, type: 'default') %>
     <% end %>
   </tbody>
 </table>

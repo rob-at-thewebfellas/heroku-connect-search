@@ -28,17 +28,7 @@
         <td class="warning" colspan="3">No contacts available</td>
       </tr>
     <% else %>
-      <% @contacts.each do |contact| %>
-        <tr>
-          <td><%= link_to(contact_name(contact), contact) %></td>
-          <td><%= contact.title %></td>
-          <td>
-            <%= link_to('Edit', edit_contact_path(contact)) %>
-            &nbsp;
-            <%= link_to('Destroy', contact, method: :delete, data: { confirm: 'Are you sure?' }) %>
-          </td>
-        </tr>
-      <% end %>
+      <%= render(@contacts, type: 'default') %>
     <% end %>
   </tbody>
 </table>
