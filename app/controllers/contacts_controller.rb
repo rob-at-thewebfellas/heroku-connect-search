@@ -5,7 +5,7 @@ class ContactsController < ApplicationController
   before_action :set_contact, only: [ :show, :edit, :update, :destroy ]
 
   def create
-    @contact = Salesforce::TheWebFellas::Contact.new(contact_params)
+    @contact = Salesforce::OrganisationA::Contact.new(contact_params)
     @contact.save
     respond_with(@contact)
   end
@@ -24,7 +24,7 @@ class ContactsController < ApplicationController
   end
 
   def new
-    @contact = Salesforce::TheWebFellas::Contact.new
+    @contact = Salesforce::OrganisationA::Contact.new
     respond_with(@contact)
   end
 
@@ -41,12 +41,12 @@ class ContactsController < ApplicationController
 
     def collection_scope
       if search_params_present?
-        apply_scopes(Salesforce::TheWebFellas::Contact.search_order_by_name, search_params).search(
-          per_page: Salesforce::TheWebFellas::Contact.default_per_page,
+        apply_scopes(Salesforce::OrganisationA::Contact.search_order_by_name, search_params).search(
+          per_page: Salesforce::OrganisationA::Contact.default_per_page,
           star: true
         )
       else
-        Salesforce::TheWebFellas::Contact.not_deleted.order_by_name.page(search_params[:page])
+        Salesforce::OrganisationA::Contact.not_deleted.order_by_name.page(search_params[:page])
       end
     end
 
@@ -62,7 +62,7 @@ class ContactsController < ApplicationController
     end
 
     def set_contact
-      @contact = Salesforce::TheWebFellas::Contact.find(params[:id])
+      @contact = Salesforce::OrganisationA::Contact.find(params[:id])
     end
 
 end

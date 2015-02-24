@@ -1,4 +1,4 @@
-ThinkingSphinx::Index.define 'salesforce/the_web_fellas/contact', with: :active_record do
+ThinkingSphinx::Index.define 'salesforce/organisation_a/contact', with: :active_record do
 
   indexes email
   indexes firstname, as: :first_name

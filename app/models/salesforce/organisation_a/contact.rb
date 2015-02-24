@@ -1,12 +1,12 @@
 module Salesforce
-  module TheWebFellas
+  module OrganisationA
 
     # Allows model to be used without it's namespace (for route helpers, etc)
     def self.use_relative_model_naming?
       true
     end
 
-    class Contact < ::Salesforce::Base
+    class Contact < Base
 
       SALUTATIONS = [ 'Mr.', 'Ms.', 'Mrs.', 'Dr.', 'Prof.' ].freeze
 
