@@ -13,12 +13,16 @@ module SearchableController
 
   protected
 
+    def initialize_search_params
+      (params[:q] || {}).merge(page: params[:page])
+    end
+
     def search_params_present?
       search_params.except(:page).values.any?(&:present?)
     end
 
     def search_params
-      @search_params ||= (params[:q] || {}).merge(page: params[:page])
+      @search_params ||= initialize_search_params
     end
 
 end
