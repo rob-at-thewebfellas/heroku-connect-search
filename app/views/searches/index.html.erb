@@ -8,6 +8,27 @@
       <%= text_field_tag('q[keywords]', search_params[:keywords], id: 'keywords') %>
     </div>
   </div>
+  <div class="field_wrapper">
+    <div class="field_label">
+      <%= label_tag('q_class_0', 'Type') %>
+    </div>
+    <div class="field_input">
+      <ul class="collection_wrapper">
+        <li class="checkbox">
+          <%= check_box_tag('q[classes][]', 0, search_params[:classes].include?(0), id: 'q_class_0') %>
+          <%= label_tag('q_class_0', 'Companies', class: 'collection_check_boxes') %>
+        </li>
+        <li class="checkbox">
+          <%= check_box_tag('q[classes][]', 1, search_params[:classes].include?(1), id: 'q_class_1') %>
+          <%= label_tag('q_class_1', 'Organisation A Contacts', class: 'collection_check_boxes') %>
+        </li>
+        <li class="checkbox">
+          <%= check_box_tag('q[classes][]', 2, search_params[:classes].include?(2), id: 'q_class_2') %>
+          <%= label_tag('q_class_2', 'Organisation B Contacts', class: 'collection_check_boxes') %>
+        </li>
+      </ul>
+    </div>
+  </div>
   <%= submit_tag("Search", name: nil) %>
 <% end %>
 <table>
