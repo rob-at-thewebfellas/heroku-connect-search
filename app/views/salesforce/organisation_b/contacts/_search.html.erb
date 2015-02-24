@@ -1,9 +1,9 @@
-<tr>
+<%= content_tag(:tr, class: dom_class(contact)) do %>
   <td><%= link_to(contact_name(contact, false), contact) %></td>
-  <td><%= contact.title %></td>
+  <td>Contact (Organisation B)</td>
   <td>
-    <%= link_to('Edit', edit_contact_path(contact)) %>
+    <%= link_to('Edit', [ :edit, contact ]) %>
     &nbsp;
     <%= link_to('Destroy', contact, method: :delete, data: { confirm: 'Are you sure?' }) %>
   </td>
-</tr>
+<% end %>

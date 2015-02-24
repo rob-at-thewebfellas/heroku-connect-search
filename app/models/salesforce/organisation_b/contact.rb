@@ -1,9 +1,7 @@
 module Salesforce
-  module OrganisationA
+  module OrganisationB
 
-    class Contact < OrganisationA::Base
-
-      SALUTATIONS = [ 'Mr.', 'Ms.', 'Mrs.', 'Dr.', 'Prof.' ].freeze
+    class Contact < OrganisationB::Base
 
       include Searchable
       sphinx_scope(:search_order_by_name) { { order: :name } }
@@ -14,7 +12,6 @@ module Salesforce
       # Make connect field names feel more 'Railsy'
       alias_attribute :first_name, :firstname
       alias_attribute :last_name, :lastname
-      alias_attribute :mobile, :mobilephone
 
       validates :first_name, :last_name, presence: true
 

@@ -1,0 +1,38 @@
+<h2 class="page_heading">Organisation A Contacts</h2>
+<p class="help">
+  Contacts are Heroku Connect models that are kept in sync with Salesforce. There will be a delay
+  before updates made in Salesforce are shown here (the data will re-sync every 10 minutes).
+</p>
+<%= form_tag(salesforce_organisation_a_contacts_path, method: :get) do %>
+  <div class="field_wrapper">
+    <div class="field_label">
+      <%= label_tag(:keywords, "Search keywords") %>
+    </div>
+    <div class="field_input">
+      <%= text_field_tag('q[keywords]', current_scopes[:keywords], id: 'keywords') %>
+    </div>
+  </div>
+  <%= submit_tag("Search", name: nil) %>
+<% end %>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Title</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% if @contacts.empty? %>
+      <tr>
+        <td class="warning" colspan="3">No contacts available</td>
+      </tr>
+    <% else %>
+      <%= render(@contacts, type: 'default') %>
+    <% end %>
+  </tbody>
+</table>
+<%= paginate(@contacts) %>
+<ul>
+  <li><%= link_to('New Contact', new_salesforce_organisation_a_contact_path) %></li>
+</ul>

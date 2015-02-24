@@ -1,0 +1,17 @@
+<h2 class="page_heading">Organisation A Contact Details</h2>
+<dl>
+  <dt class="label">Name</dt>
+  <dd class="content"><%= contact_name(@contact) %></dd>
+  <dt class="label">Title</dt>
+  <dd class="content"><%= @contact.title %></dd>
+  <dt class="label">Email</dt>
+  <dd class="content"><%= @contact.email %></dd>
+  <dt class="label">Mobile</dt>
+  <dd class="content"><%= @contact.mobile %></dd>
+  <dt class="label">Last updated</dt>
+  <dd class="content"><%= l(@contact.updated_at, format: :long) %></dd>
+</dl>
+<ul>
+  <li><%= link_to('Edit', [ :edit, @contact ]) %></li>
+  <li><%= link_to('Back', @contact.class) %></li>
+</ul>

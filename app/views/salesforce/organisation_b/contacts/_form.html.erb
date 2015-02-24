@@ -1,0 +1,68 @@
+<%= form_for(@contact) do |form| %>
+  <% if @contact.errors.any? %>
+    <div class="errors_on_base">
+      <h3><%= pluralize(@contact.errors.count, "error") %> prohibited this contact from being saved:</h3>
+      <ul>
+        <% @contact.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <fieldset>
+    <div class="field_wrapper required">
+      <div class="field_label">
+        <%= form.label(:first_name) %>
+      </div>
+      <div class="field_input">
+        <%= form.text_field(:first_name, size: 50) %>
+      </div>
+    </div>
+    <div class="field_wrapper required">
+      <div class="field_label">
+        <%= form.label(:last_name) %>
+      </div>
+      <div class="field_input">
+        <%= form.text_field(:last_name, size: 50) %>
+      </div>
+    </div>
+  </fieldset>
+  <fieldset>
+    <div class="field_wrapper required">
+      <div class="field_label">
+        <%= form.label(:department) %>
+      </div>
+      <div class="field_input">
+        <%= form.text_field(:department, size: 50) %>
+      </div>
+    </div>
+    <div class="field_wrapper required">
+      <div class="field_label">
+        <%= form.label(:title) %>
+      </div>
+      <div class="field_input">
+        <%= form.text_field(:title, size: 50) %>
+      </div>
+    </div>
+    <div class="field_wrapper required">
+      <div class="field_label">
+        <%= form.label(:email) %>
+      </div>
+      <div class="field_input">
+        <%= form.text_field(:email, size: 50) %>
+      </div>
+    </div>
+    <div class="field_wrapper required">
+      <div class="field_label">
+        <%= form.label(:phone) %>
+      </div>
+      <div class="field_input">
+        <%= form.text_field(:phone, size: 50) %>
+      </div>
+    </div>
+  </fieldset>
+  <div class="buttons">
+    <%= form.submit %>
+    <%= link_to('Cancel', @contact.class, class: 'button cancel') %>
+  </div>
+<% end %>

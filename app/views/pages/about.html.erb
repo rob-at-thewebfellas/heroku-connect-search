@@ -27,8 +27,17 @@
     <p>Companies demonstrate how Sphinx works with standard database records.</p>
   </li>
   <li>
-    <h4><%= link_to('Contacts', contacts_path) %></h4>
-    <p>Contacts are provided via Heroku Connect and demonstrate how Sphinx can be used to search the data sync'd with Salesforce.</p>
+    <h4><%= link_to('Organisation A Contacts', salesforce_organisation_a_contacts_path) %></h4>
+    <p>Contacts are provided via Heroku Connect and demonstrate how Sphinx can be used to search the data sync'd with Salesforce Organisation A.</p>
+  </li>
+  <li>
+    <h4><%= link_to('Organisation B Contacts', salesforce_organisation_b_contacts_path) %></h4>
+    <p>As with Organisation A Contacts these records are provided via Heroku connect and are searchable.
+       They are provided by a second connection to a different organisation and contain a different set of mapped fields to
+       demonstrate that it is possible to work with the same type of data from multiple organisations.</p>
+    <p><strong>Note:</strong> the second organisation is currently being simulated and is really just connecting to the same
+       organisation behind the scenes, this means that changes made to a contact in organisation B will currently appear in
+       organisation A and vice-versa.</p>
   </li>
 </ul>
 <h3>Global search</h3>

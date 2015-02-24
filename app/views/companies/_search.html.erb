@@ -1,4 +1,4 @@
-<tr>
+<%= content_tag(:tr, class: dom_class(company)) do %>
   <td><%= link_to(company.name, company) %></td>
   <td>Company</td>
   <td>
@@ -6,4 +6,4 @@
     &nbsp;
     <%= link_to('Destroy', company, method: :delete, data: { confirm: 'Are you sure?' }) %>
   </td>
-</tr>
+<% end %>

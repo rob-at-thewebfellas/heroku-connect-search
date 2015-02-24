@@ -1,0 +1,10 @@
+<tr>
+  <td><%= link_to(contact_name(contact), contact) %></td>
+  <td><%= contact.department %></td>
+  <td><%= contact.title %></td>
+  <td>
+    <%= link_to('Edit', [ :edit, contact ]) %>
+    &nbsp;
+    <%= link_to('Destroy', contact, method: :delete, data: { confirm: 'Are you sure?' }) %>
+  </td>
+</tr>

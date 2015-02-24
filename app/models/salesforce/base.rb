@@ -1,10 +1,14 @@
 module Salesforce
+
   class Base < ::ActiveRecord::Base
 
     self.pluralize_table_names = false
     self.abstract_class = true
 
     establish_connection ENV['HEROKUCONNECT_URL']
+
+    alias_attribute :created_at, :createddate
+    alias_attribute :updated_at, :systemmodstamp
 
     private
 
