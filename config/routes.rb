@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   resources :companies
+  resources :contacts, only: :index
 
   namespace :salesforce do
     namespace :organisation_a do
