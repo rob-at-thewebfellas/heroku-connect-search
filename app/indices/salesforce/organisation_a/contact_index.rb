@@ -1,4 +1,8 @@
-ThinkingSphinx::Index.define 'salesforce/organisation_a/contact', with: :active_record do
+ThinkingSphinx::Index.define 'salesforce/organisation_a/contact',
+  with: :active_record,
+  delta: ThinkingSphinx::Deltas::DatetimeDelta,
+  delta_options: { column: :systemmodstamp, threshold: 15.minutes } do
+
 
   indexes email
   indexes firstname, as: :first_name
