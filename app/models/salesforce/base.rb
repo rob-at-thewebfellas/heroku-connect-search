@@ -14,7 +14,7 @@ module Salesforce
 
        # Timestamps only get populated when data is received from Salesforce
        # causing problems in the interim - this allows Rails to set the initial
-       # values and doesn't appear to cause sync issues
+       # values which will then be overwritten when the next Salesforce sync occurs
       def timestamp_attributes_for_create
         [ :createddate, :systemmodstamp ]
       end
