@@ -65,7 +65,6 @@ gem 'rack-timeout', '0.2.0'
 # Sphinx support
 gem 'mysql2', '0.3.18'
 gem 'thinking-sphinx', '3.1.3'
-gem 'ts-datetime-delta', '2.0.1', require: 'thinking_sphinx/deltas/datetime_delta'
 gem 'flying-sphinx', '1.2.0'
 
 # Use kaminari for pagination
